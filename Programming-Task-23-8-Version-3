@@ -1,0 +1,12 @@
+initial_loan_amount = input("Enter initial loan amount: ")
+interest_rate = input("Enter initial interest rate (decimal): ")
+daily_late_fee = input("Enter the daily late fee: ")
+number_days_late = input("Enter the number of days late the payment was: ")
+currency_conversion_fee = input("Enter the currency conversion fee (decimal): ")
+
+
+amount_after_interest = (1 + float(interest_rate))*float(initial_loan_amount)
+amount_after_late_fee = amount_after_interest + ((float(daily_late_fee)*float(number_days_late)))
+amount_after_currency_conversion_fee = (1+float(currency_conversion_fee))*amount_after_late_fee
+
+print("The total is: " + str(amount_after_currency_conversion_fee))
