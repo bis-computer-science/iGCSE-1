@@ -1,0 +1,20 @@
+# Initial values
+initial_loan_amount = 30000
+interest_rate = .2
+daily_late_fee = 300
+currency_conversion_fee = .05
+credit_card_fee = 20
+
+# Our final result
+total_amount_to_be_paid = 0
+
+#Process everything (Method 1)
+amount_after_interest = (.2*30000) + 30000
+
+amount_after_late_fee = amount_after_interest + daily_late_fee
+
+amount_after_currency_conversion_fee = amount_after_late_fee + (.05*amount_after_late_fee)
+
+total_amount_to_be_paid = amount_after_currency_conversion_fee
+
+print("Total amount: " + str(total_amount_to_be_paid))
