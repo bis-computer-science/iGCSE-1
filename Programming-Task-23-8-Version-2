@@ -3,7 +3,7 @@ interest_rate = .2
 daily_late_fee = 300
 currency_conversion_fee = .05
 
-#Process everything (Method 1)
+#Process everything (Method 2)
 total_amount_to_be_paid = 1.05*((.2*30000) + 30000 + 300)
 
 print("Total amount: " + str(total_amount_to_be_paid))
